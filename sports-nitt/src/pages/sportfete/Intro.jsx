@@ -4,8 +4,8 @@ import "./intro.css";
 
 export default function Intro({ title, desc, formLink }) {
 	return (
-		<div class="hero-image">
-			<div class="hero-text">
+		<div className="hero-image">
+			<div className="hero-text">
 				{/* <img src={logo} alt="logo" /> */}
 				<h1>{title}</h1>
 				<p>{desc}</p>
@@ -18,7 +18,7 @@ export default function Intro({ title, desc, formLink }) {
 						formTarget="_blank"
 						type="submit"
 						value="Join"
-						class="btn-default"
+						className="btn-default"
 					/>
 				</form>
 			</div>

@@ -17,8 +17,8 @@
 // 		</Container>
 // 	);
 // }
-import React, { useState } from 'react';
-import { Button, Menu, Segment } from 'semantic-ui-react';
+import React from 'react';
+import { Button } from 'semantic-ui-react';
 import { colors } from '../../utils/colors';
 
 const EVENTS = [
@@ -28,7 +28,7 @@ const EVENTS = [
 	"Sportsfete '19",
 ];
 
-export default Event = ({ eventName, setEventName }) => {
+const EventComponent = ({ eventName, setEventName }) => {
 	return (
 		<div
 			id='menu-container'
@@ -46,8 +46,9 @@ export default Event = ({ eventName, setEventName }) => {
 				// marginLeft: '10%',
 			}}
 		>
-			{EVENTS.map((ele) => (
+			{EVENTS.map((ele, i) => (
 				<Button
+					key={i}
 					style={{
 						marginRight: '20px',
 						backgroundColor: eventName === ele ? colors.secondary : 'white',
@@ -63,3 +64,5 @@ export default Event = ({ eventName, setEventName }) => {
 		</div>
 	);
 };
+
+export default EventComponent;

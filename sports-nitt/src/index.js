@@ -9,7 +9,6 @@ import 'semantic-ui-css/semantic.min.css';
 import Sportsfete from './pages/sportfete/Sportsfete';
 import ComingSoon from './pages/ComingSoon';
 import Team from './pages/teamsPage/Team';
-import Event from './pages/gallery/Event';
 import Gallery from './pages/gallery/Gallery';
 import Blog from './pages/blogs/Blog';
 import FourOFour from './pages/FourOFour';

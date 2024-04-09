@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Grid, Segment, Divider } from "semantic-ui-react";
+import { List, Grid, Segment } from "semantic-ui-react";
 import { colors } from "../../utils/colors";
 
 export default function Sports({ data }) {

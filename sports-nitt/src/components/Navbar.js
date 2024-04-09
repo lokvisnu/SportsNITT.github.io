@@ -1,21 +1,22 @@
+/* eslint-disable eqeqeq */
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import GitHubIcon from '@material-ui/icons/GitHub';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import TwitterIcon from '@material-ui/icons/Twitter';
 import logo from '../assets/images/logo.png';
 import { colors } from '../utils/colors';
 
 export default function NavbarMain() {
 	const [activeLink, setactiveLink] = useState('home');
-	const social = [
-		{ name: 'GitHub', icon: GitHubIcon, link: '' },
-		{ name: 'Twitter', icon: TwitterIcon, link: '' },
-		{ name: 'Facebook', icon: FacebookIcon, link: '' },
-	];
+	// const social = [
+	// 	{ name: 'GitHub', icon: GitHubIcon, link: '' },
+	// 	{ name: 'Twitter', icon: TwitterIcon, link: '' },
+	// 	{ name: 'Facebook', icon: FacebookIcon, link: '' },
+	// ];
 	useEffect(() => {
 		setactiveLink(window.location.pathname.substring(1));
-	}, [window.location.pathname]);
+	}, []);
 
 	return (
 		<Navbar

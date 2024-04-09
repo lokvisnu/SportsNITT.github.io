@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,8 +8,8 @@ import {
 	Box,
 	Card,
 	CardContent,
-	Link,
-	Button,
+	// Link,
+	// Button,
 	Modal,
 } from '@material-ui/core';
 

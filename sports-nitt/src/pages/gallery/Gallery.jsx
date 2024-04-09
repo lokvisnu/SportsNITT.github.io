@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {
 	Button,
 	Container,
-	Grid,
-	Icon,
-	Image,
 	Loader,
 	Pagination,
 } from 'semantic-ui-react';
 import Footer from '../../components/Footer';
 import NavbarMain from '../../components/Navbar';
-import Event from './Event';
+import EventComponent from './Event';
 import images from '../../assets/content/gallery.json';
 import './gallery.css';
 
@@ -46,7 +43,7 @@ export default function Gallery() {
 		document.addEventListener('scroll', () => {
 			toggleVisibility();
 		});
-	}, []);
+	}, [eventName]);
 	function toggleVisibility() {
 		if (window.pageYOffset > 300) {
 			setIsVisible(true);
@@ -75,7 +72,7 @@ export default function Gallery() {
 					marginBottom: '5%',
 				}}
 			>
-				<Event eventName={eventName} setEventName={setEventName} />
+				<EventComponent eventName={eventName} setEventName={setEventName} />
 				{!loading ? (
 					<div
 						style={{
@@ -85,12 +82,12 @@ export default function Gallery() {
 							alignItems: 'center',
 						}}
 					>
-						<div class='gallery_grid'>
+						<div className='gallery_grid'>
 							{imageData &&
 								imageData.map((ele, i) => (
-									<div class='gallery_grid__item'>
+									<div key={i} className='gallery_grid__item'>
 										<img
-											src={ele.src}
+											src="https://drive.google.com/uc?id=1ACPv2_FcaIp4fECVITVU4AwAitj1jWvP&export=view"
 											alt={ele.alt}
 											loading='lazy'
 											width={'100%'}
@@ -100,6 +97,7 @@ export default function Gallery() {
 												setisClicked((prev) => !prev);
 											}}
 										/>
+										{console.log(ele.src)};
 									</div>
 								))}
 						</div>

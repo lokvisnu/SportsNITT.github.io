@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import {
 	Grid,
 	Container,
 	Divider,
 	List,
 	Button,
-	Icon,
 } from 'semantic-ui-react';
 import { colors } from '../utils/colors';
 import './Footer.css';

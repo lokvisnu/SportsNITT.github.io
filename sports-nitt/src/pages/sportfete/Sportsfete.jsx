@@ -10,7 +10,7 @@ import { Container } from "react-bootstrap";
 import "../../App.css";
 import Video from "./Video";
 import Contact from "./Contact";
-import Winners from "./Winners";
+// import Winners from "./Winners";
 
 export default function Sportsfete() {
 	return (
@@ -30,6 +30,11 @@ export default function Sportsfete() {
 				<About />
 				<Sports data={sportsfete.sports} />
 				<Teams data={sportsfete.teams} />
+				<Video
+					utube={sportsfete["SF'23_aftermovie_link"]}
+					title={"Sportsfete'23"}
+					data={sportsfete.winners_2023}
+				/>
 				<Video
 					utube={sportsfete["SF'19_aftermovie_link"]}
 					title={"Sportsfete'19"}
